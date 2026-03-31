@@ -1,10 +1,11 @@
 // Base de datos de autos con imágenes según marca y modelo
+// Cada objeto representa un auto con sus atributos.
 const autosData = [
   {
-    marca: "Toyota",
-    modelo: "Corolla",
-    descripcion: "Sedán compacto confiable y eficiente en combustible.",
-    imagen: "images/Toyota_Corolla.jpeg"
+    marca: "Toyota", // Nombre de la marca
+    modelo: "Corolla", // Modelo del auto
+    descripcion: "Sedán compacto confiable y eficiente en combustible.", // Texto descriptivo
+    imagen: "images/Toyota_Corolla.jpeg" // Ruta de la imagen
   },
   {
     marca: "Ford",

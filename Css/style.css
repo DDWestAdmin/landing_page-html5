@@ -1,59 +1,68 @@
+/* Estilos generales del cuerpo de la página */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  font-family: Arial, sans-serif; /* Tipografía principal */
+  margin: 0; /* Quitar margen por defecto */
+  padding: 0; /* Quitar padding por defecto */
+  background-color: #f4f4f4; /* Color de fondo claro */
 }
 
+/* Estilos del encabezado */
 header {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  text-align: center; /* Centrar texto */
+  padding: 20px; /* Espacio interno */
 }
 
+/* Estilos del panel de filtros */
 #filtro {
-  background-color: #e0e0e0;
-  padding: 10px;
-  text-align: center;
+  background-color: #e0e0e0; /* Fondo gris claro */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Centrar el contenido */
 }
 
+/* Contenedor de tarjetas de autos */
 #modelos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
+  display: flex; /* Uso de flexbox para lay out */
+  flex-wrap: wrap; /* Permitir que las tarjetas se ajusten en varias filas */
+  justify-content: center; /* Centrar horizontalmente */
+  padding: 20px; /* Espacio alrededor */
 }
 
+/* Estilo de cada tarjeta de auto */
 .auto {
-  background-color: white;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  width: auto;
-  text-align: center;
+  background-color: white; /* Fondo blanco para tarjeta */
+  margin: 10px; /* Margen externo entre tarjetas */
+  padding: 10px; /* Padding interno */
+  border: 1px solid #ccc; /* Borde gris suave */
+  width: auto; /* Ancho automático */
+  text-align: center; /* Centrar contenido dentro de la tarjeta */
 }
 
+/* Estilos para las imágenes dentro de cada tarjeta */
 .auto img {
-  width: 800px;
-  height: 400px;
-  object-fit: cover;
+  width: 800px; /* Ancho fijo (podrías ajustar a responsive con max-width) */
+  height: 400px; /* Alto fijo */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
 }
 
+/* Contenedor de detalle oculto por ahora */
 #detalle-auto {
-  display: none; /* ocultar detalle, solo mostrar la galería principal */
+  display: none; /* Ocultado para mostrar solo galerías principales */
 }
 
+/* Estilo de detalle alterno también oculto */
 .auto-detalle {
-  display: none;
+  display: none; /* Ocultado por defecto */
 }
 
+/* Pie de página fijo */
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  text-align: center; /* Texto centrado */
+  padding: 10px; /* Espacio interno */
+  position: fixed; /* Fijar al fondo de la ventana */
+  bottom: 0; /* En la parte inferior */
+  width: 100%; /* Ancho completo */
 }
