@@ -26,12 +26,12 @@
     </select>
   </div>
 
-  <div id="logos" style="text-align:center; margin:10px 0;"> <!-- Bloque con logos para filtrado por marca -->
+  <div id="logos"> <!-- Bloque con logos para filtrado por marca -->
     <p>Haz clic en la marca para filtrar autos:</p>
-    <img src="images/logos/Ford.jpeg" alt="Ford" data-marca="Ford" style="cursor:pointer; width:100px; margin:5px;" />
-    <img src="images/logos/Chevrolet.jpeg" alt="Chevrolet" data-marca="Chevrolet" style="cursor:pointer; width:100px; margin:5px;" />
-    <img src="images/logos/Honda.jpeg" alt="Honda" data-marca="Honda" style="cursor:pointer; width:100px; margin:5px;" />
-    <img src="images/logos/toyota.jpeg" alt="Toyota" data-marca="Toyota" style="cursor:pointer; width:100px; margin:5px;" />
+    <img src="images/logos/Ford.jpeg" alt="Ford" data-marca="Ford" class="logo-button" />
+    <img src="images/logos/Chevrolet.jpeg" alt="Chevrolet" data-marca="Chevrolet" class="logo-button" />
+    <img src="images/logos/Honda.jpeg" alt="Honda" data-marca="Honda" class="logo-button" />
+    <img src="images/logos/toyota.jpeg" alt="Toyota" data-marca="Toyota" class="logo-button" />
   </div>
 
   <div id="modelos"> <!-- Contenedor donde se mostrarán las tarjetas de autos -->
@@ -51,6 +51,7 @@
     const modeloSelect = document.getElementById('modelo-select'); // Dropdown de modelos
 
     function displayModelos(cars) { // Función para mostrar una lista de autos
+      modelosDiv.style.display = 'flex'; // Asegurar que el contenedor esté visible cuando haya resultados
       modelosDiv.innerHTML = ''; // Limpiar antes de renderizar
       cars.forEach(auto => {
         const autoCard = document.createElement('div'); // Crear contenedor para el auto
@@ -63,8 +64,8 @@
       });
     }
 
-    // Mostrar todos los modelos por defecto (sin filtros)
-    displayModelos(data);
+    // No mostrar modelos al cargar, solo cuando el usuario hace clic en un logo o selecciona una marca.
+    // displayModelos(data);
 
     marcaSelect.addEventListener('change', () => { // Evento al cambiar la marca seleccionada
       const selectedMarca = marcaSelect.value; // Marca elegida

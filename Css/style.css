@@ -16,14 +16,33 @@ header {
 
 /* Estilos del panel de filtros */
 #filtro {
+  display: none; /* Ocultar filtro al inicio */
   background-color: #e0e0e0; /* Fondo gris claro */
   padding: 10px; /* Espaciado interno */
   text-align: center; /* Centrar el contenido */
 }
 
+/* Contenedor de botones de marca */
+#logos {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.logo-button {
+  width: 685px; /* ancho 685px */
+  height: 685px; /* alto 685px */
+  object-fit: contain; /* conservar proporción dentro del contenedor */
+  background-color: white; /* cuadro blanco */
+  border: 1px solid black; /* borde delgado negro */
+  cursor: pointer; /* puntero en hover */
+  margin: 5px;
+  display: inline-block;
+  padding: 0;
+}
+
 /* Contenedor de tarjetas de autos */
 #modelos {
-  display: flex; /* Uso de flexbox para lay out */
+  display: none; /* Ocultar modelos al inicio */
   flex-wrap: wrap; /* Permitir que las tarjetas se ajusten en varias filas */
   justify-content: center; /* Centrar horizontalmente */
   padding: 20px; /* Espacio alrededor */
