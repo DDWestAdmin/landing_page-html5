@@ -26,6 +26,14 @@
     </select>
   </div>
 
+  <div id="logos" style="text-align:center; margin:10px 0;"> <!-- Bloque con logos para filtrado por marca -->
+    <p>Haz clic en la marca para filtrar autos:</p>
+    <img src="images/logos/Ford.jpeg" alt="Ford" data-marca="Ford" style="cursor:pointer; width:100px; margin:5px;" />
+    <img src="images/logos/Chevrolet.jpeg" alt="Chevrolet" data-marca="Chevrolet" style="cursor:pointer; width:100px; margin:5px;" />
+    <img src="images/logos/Honda.jpeg" alt="Honda" data-marca="Honda" style="cursor:pointer; width:100px; margin:5px;" />
+    <img src="images/logos/toyota.jpeg" alt="Toyota" data-marca="Toyota" style="cursor:pointer; width:100px; margin:5px;" />
+  </div>
+
   <div id="modelos"> <!-- Contenedor donde se mostrarán las tarjetas de autos -->
     <!-- Solo imágenes de los modelos se mostrarán aquí -->
   </div>
@@ -35,6 +43,7 @@
   </footer>
 
   <script src="Jvscript/autos.js"></script> <!-- Carga los datos de autos desde el archivo JavaScript -->
+  <script src="Jvscript/logos.js"></script> <!-- Maneja clics en logos para filtrar por marca -->
   <script> <!-- Script específico para manejar la lógica de filtrado y visualización -->
     const data = autosData; // Usa la data definida en autos.js
     const modelosDiv = document.getElementById('modelos'); // Elemento donde se muestran las tarjetas
