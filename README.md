@@ -1,2 +1,3 @@
 # landing_page-html5
-Página de práctica y estudio del instituto Inacap, 
+Proyecto de prueba de Alumno del Instituto Inacap
+c:
