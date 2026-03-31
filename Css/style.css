@@ -29,8 +29,8 @@ header {
 }
 
 .logo-button {
-  width: 685px; /* ancho 685px */
-  height: 685px; /* alto 685px */
+  width: 450px; /* ancho 685px */
+  height: 450px; /* alto 685px */
   object-fit: contain; /* conservar proporción dentro del contenedor */
   background-color: white; /* cuadro blanco */
   border: 1px solid black; /* borde delgado negro */
