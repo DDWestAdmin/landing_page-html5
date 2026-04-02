@@ -1,0 +1,46 @@
+* { /* Selecciona todos los elementos de la página */
+  margin: 0; /* Quita los márgenes externos por defecto */
+  padding: 0; /* Quita el espacio interno por defecto */
+  box-sizing: border-box; /* Incluye el borde en el tamaño del elemento */
+}
+
+body { /* Estilos para el cuerpo de la página */
+  background-color: white; /* Fondo blanco */
+  font-family: Arial, sans-serif; /* Fuente Arial para todo el texto */
+}
+
+header { /* Estilos para el encabezado -->
+  background-color: black; /* Fondo negro */
+  text-align: center; /* Texto centrado */
+  padding: 20px; /* Espacio interno de 20 píxeles */
+}
+
+header h1 { /* Estilos para el título dentro del encabezado */
+  font-family: Arial, sans-serif; /* Fuente Arial */
+  font-size: 18px; /* Tamaño de letra 18 píxeles */
+  color: white; /* Color de texto blanco */
+}
+
+#contenedor1 { /* Estilos para el primer contenedor */
+  width: 100%; /* Ancho del 100% de la página */
+  min-height: 200px; /* Altura mínima de 200 píxeles */
+  background-color: white; /* Fondo blanco */
+}
+
+#contenedor2 { /* Estilos para el segundo contenedor */
+  width: 100%; /* Ancho del 100% de la página */
+  min-height: 200px; /* Altura mínima de 200 píxeles */
+  background-color: white; /* Fondo blanco */
+}
+
+footer { /* Estilos para el pie de página */
+  background-color: black; /* Fondo negro */
+  text-align: center; /* Texto centrado */
+  padding: 20px; /* Espacio interno de 20 píxeles */
+  color: white; /* Color de texto blanco */
+}
+
+footer p { /* Estilos para el párrafo dentro del pie de página */
+  color: white; /* Color de texto blanco */
+  font-family: Arial, sans-serif; /* Fuente Arial */
+}
