@@ -88,6 +88,14 @@ header h1 {
   object-fit: contain; /* Ajusta la imagen sin distorsionarla */    
 }
 
+.instrucciones {
+  text-align: center; /* Centra el texto */
+  font-family: Arial, sans-serif; /* Fuente Arial */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  font-style: italic; /* Estilo de fuente en cursiva */
+  margin-bottom: 40px; /* Espacio debajo del texto */
+}
+
 footer { /* Estilos para el pie de página */
   background-color: black; /* Fondo negro */
   text-align: center; /* Texto centrado */
