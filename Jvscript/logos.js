@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() { // Espera a que el DO
     const modal = document.getElementById("modalAuto"); // Referencia al modal
     const imagenAuto = document.getElementById("imagenAuto"); // Imagen dentro del modal
     const descrAuto = document.getElementById("descrAuto"); // Descripción dentro del modal
-    const btnSeleccionar = document.getElementById("btnSeleccionar"); // Botón para volver
+    const botonSeleccionar = document.getElementById("botonSeleccionar"); // Botón para volver
 
     // Diccionario de autos con imagen y descripción por marca
     const autos = {

@@ -56,17 +56,36 @@ header h1 {
   max-width: 900px; /* Máximo ancho */
 }
 
-.imagenAuto img{  
-  width: 600px; /* Ancho imagen auto */ 
-  height: 400px; /* Alto imagen auto */
-  border: 4px solid black;
+/* dimensiones de ventana de modal */
+#modalAuto >div { 
+  display: flex; /* Fila de contenido modal */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */  
+  max-width: 700px;
+  min-width: 500px;
+  height: 500px;
 }
 
-.descrAuto {
-  flex: 1;
-  font-size: 16px;
-  line-height: 1.5;
-  font-family: Arial, sans-serif;
+/* posicionamientpo de descripción de auto en modal */
+#descrAuto {
+  display: flex; /* Usa flexbox para centrar el contenido */
+  align-items: center; /* Centra verticalmente el texto dentro del contenedor */
+  justify-content: center; /* Centra horizontalmente el texto dentro del contenedor */
+  height: 200px; /* Altura del área de descripción */
+  text-align: center; /* Centra el texto */
+  font-family: Arial, sans-serif; /* Fuente Arial */
+  margin-bottom: 20px; /* Espacio debajo de la descripción */
+  margin-left: 30px; /* Separa la descripción de la imagen */
+}
+
+/* dimensiones de imagen de auto en modal */
+#imagenAuto {
+  display: flex; /* Usa flexbox para centrar la imagen */
+  align-items: center; /* Centra verticalmente la imagen dentro del contenedor */ 
+  justify-content: center; /* Centra horizontalmente la imagen dentro del contenedor */ 
+  height: 400px; /* Altura de la imagen en el modal */  
+  width: 400px; /* Ancho de la imagen en el modal */  
+  object-fit: contain; /* Ajusta la imagen sin distorsionarla */    
 }
 
 footer { /* Estilos para el pie de página */
