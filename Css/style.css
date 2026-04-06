@@ -23,6 +23,7 @@ header h1 { /* Estilos para el título dentro del encabezado */
 
 #contenedor1 { /* Estilos para el primer contenedor */
   width: 100%; /* Ancho del 100% de la página */
+  
   min-height: 200px; /* Altura mínima de 200 píxeles */
   background-color: white; /* Fondo blanco */
 }
