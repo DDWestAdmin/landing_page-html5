@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() { // Espera a que el DO
     });
 
     // Botón volver: cierra el modal y sube al inicio
-    btnSeleccionar.addEventListener("click", function() {
+    botonSeleccionar.addEventListener("click", function() {
         modal.style.display = "none"; // Oculta el modal
         imagenAuto.src = ""; // Limpia la imagen
         descrAuto.textContent = ""; // Limpia la descripción

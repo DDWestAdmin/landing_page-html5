@@ -56,9 +56,9 @@ header h1 {
   max-width: 900px; /* Máximo ancho */
 }
 
-.imagenAuto img{
-  width: 400px; /* Ancho imagen auto */
-  height: 200px; /* Alto imagen auto */
+.imagenAuto img{  
+  width: 600px; /* Ancho imagen auto */ 
+  height: 400px; /* Alto imagen auto */
   border: 4px solid black;
 }
 
