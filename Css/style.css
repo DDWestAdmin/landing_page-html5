@@ -1,37 +1,72 @@
-* { /* Selecciona todos los elementos de la página */
-  margin: 0; /* Quita los márgenes externos por defecto */
-  padding: 0; /* Quita el espacio interno por defecto */
-  box-sizing: border-box; /* Incluye el borde en el tamaño del elemento */
+/* Estilos globales para todos los elementos */
+* { 
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina relleno por defecto */
+  box-sizing: border-box; /* Incluye el borde en el tamaño total */
 }
 
-body { /* Estilos para el cuerpo de la página */
+body { 
   background-color: white; /* Fondo blanco */
-  font-family: Arial, sans-serif; /* Fuente Arial para todo el texto */
+  font-family: Arial, sans-serif; /* Fuente general */
 }
 
-header { /* Estilos para el encabezado -->
-  background-color: black; /* Fondo negro */
-  text-align: center; /* Texto centrado */
-  padding: 20px; /* Espacio interno de 20 píxeles */
+header { 
+  background-color: black; /* Fondo negro en el header */
+  text-align: center; /* Centra el texto */
+  padding: 20px; /* Espaciado interno */
 }
 
-header h1 { /* Estilos para el título dentro del encabezado */
+header h1 { 
+  color: white; /* Título blanco */
   font-family: Arial, sans-serif; /* Fuente Arial */
-  font-size: 18px; /* Tamaño de letra 18 píxeles */
-  color: white; /* Color de texto blanco */
+  font-size: 40px; /* Tamaño grande */
 }
 
-#contenedor1 { /* Estilos para el primer contenedor */
-  width: 100%; /* Ancho del 100% de la página */
-  
-  min-height: 200px; /* Altura mínima de 200 píxeles */
-  background-color: white; /* Fondo blanco */
+.logos { 
+  display: flex; /* Fila de logos */
+  justify-content: center; /* Centrado horizontal */
+  gap: 20px; /* Espacio entre logos */
+  margin: 40px 0; /* Margen arriba y abajo */
 }
 
-#contenedor2 { /* Estilos para el segundo contenedor */
-  width: 100%; /* Ancho del 100% de la página */
-  min-height: 200px; /* Altura mínima de 200 píxeles */
+.logos > div {
+  width: 250px; /* Ancho de cada logo */
+  min-height: 250px; /* Altura mínima */
   background-color: white; /* Fondo blanco */
+  border: 4px solid black; /* Borde negro */
+  display: flex; /* Columna interna */
+  flex-direction: column; /* Apila verticalmente */
+  justify-content: space-between; /* Espacio entre elementos internos */
+  align-items: center; /* Centrado interno */
+  padding: 10px; /* Espaciado interno */
+}
+
+.logos img {
+  width: 200px; /* Ancho imagen logo */
+  height: 200px; /* Alto imagen logo */
+  object-fit: contain; /* Ajuste proporcional */
+}
+
+.contenido {
+  display: flex; /* Fila de contenido */
+  justify-content: center; /* Centrado horizontal */
+  align-items: flex-start; /* Arriba alineado */
+  gap: 40px; /* Espacio entre columnas */
+  margin: 40px auto; /* Margen vertical y centrado */
+  max-width: 900px; /* Máximo ancho */
+}
+
+.imagenAuto img{
+  width: 400px; /* Ancho imagen auto */
+  height: 200px; /* Alto imagen auto */
+  border: 4px solid black;
+}
+
+.descrAuto {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
 }
 
 footer { /* Estilos para el pie de página */
@@ -39,6 +74,9 @@ footer { /* Estilos para el pie de página */
   text-align: center; /* Texto centrado */
   padding: 20px; /* Espacio interno de 20 píxeles */
   color: white; /* Color de texto blanco */
+  position:fixed; /* Posiciona el pie de página fijo al final de la página */
+  bottom: 0; /* Coloca el pie de página al final de la página */
+  width: 100%; /* Ancho del 100% de la página */
 }
 
 footer p { /* Estilos para el párrafo dentro del pie de página */
