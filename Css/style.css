@@ -19,7 +19,8 @@ header {
 header h1 { 
   color: white; /* Título blanco */
   font-family: Arial, sans-serif; /* Fuente Arial */
-  font-size: 40px; /* Tamaño grande */
+  font-size: 60px; /* Tamaño grande */
+  font-style: italic; /* Estilo de fuente en cursiva */
 }
 
 .logos { 
@@ -61,8 +62,7 @@ header h1 {
   display: flex; /* Fila de contenido modal */
   align-items: center; /* Centrado vertical */
   justify-content: center; /* Centrado horizontal */  
-  max-width: 700px;
-  min-width: 500px;
+  width: 800px;
   height: 500px;
 }
 
@@ -75,6 +75,7 @@ header h1 {
   min-height: 200px; /* Altura mínima para evitar que quede pegado arriba */
   text-align: center; /* Centra el texto */
   font-family: Arial, sans-serif; /* Fuente consistente */
+  font-size: 14px; /* Tamaño de fuente legible */
   margin: 0 auto 20px auto; /* Centrado horizontal y espacio inferior */
   padding: 0 10px; /* Espaciado lateral para evitar que el texto toque los bordes */
   box-sizing: border-box; /* Incluye padding en el ancho total */
@@ -86,7 +87,7 @@ header h1 {
   display: flex; /* Usa flexbox para centrar la imagen */
   align-items: center; /* Centra verticalmente la imagen dentro del contenedor */ 
   justify-content: center; /* Centra horizontalmente la imagen dentro del contenedor */ 
-  height: 400px; /* Altura de la imagen en el modal */  
+  height: 300px; /* Altura de la imagen en el modal */  
   width: 400px; /* Ancho de la imagen en el modal */  
   object-fit: contain; /* Ajusta la imagen sin distorsionarla */    
 }
@@ -94,7 +95,7 @@ header h1 {
 .instrucciones {
   text-align: center; /* Centra el texto */
   font-family: Arial, sans-serif; /* Fuente Arial */
-  font-size: 1.2rem; /* Tamaño de fuente */
+  font-size: 1.8rem; /* Tamaño de fuente */
   font-style: italic; /* Estilo de fuente en cursiva */
   margin-bottom: 40px; /* Espacio debajo del texto */
 }
