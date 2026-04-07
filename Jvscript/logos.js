@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() { // Espera a que el DO
         },
         Toyota: {
             img: 'images/autos/Toyota_Corolla.jpeg', // Imagen Toyota
-            desc: 'Toyota Corolla Hatchback 2026\n\n"Vayamos a Lugares"\n\nMotor:\nDynamic Force de 2.0 litreos,\n4 cilindros.\n\nPotencia:\n169 caballos de potencia (HP),\ny un torque de 205 Nm.\n\nConsumo de Gasolina:\n13.6 Km/l en ciudad,\n17.4 Km/l en carretera,\n14.8 Km/l ciclo Mixto.' // Descripción Toyota
+            desc: 'Toyota Corolla Hatchback 2026\n\n"Vayamos a Lugares"\n\nMotor:\nDynamic Force de 2.0 litros,\n4 cilindros.\n\nPotencia:\n169 caballos de potencia (HP),\ny un torque de 205 Nm.\n\nConsumo de Gasolina:\n13.6 Km/l en ciudad,\n17.4 Km/l en carretera,\n14.8 Km/l ciclo Mixto.' // Descripción Toyota
         }
     };
 
