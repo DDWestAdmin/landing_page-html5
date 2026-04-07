@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function() { // Espera a que el DO
                         if (autos[marca]) { // Si existe la marca en el diccionario
                                 imagenAuto.src = autos[marca].img; // Cambia la imagen del modal
                                 // Reemplaza saltos de línea por <br> y espacios dobles por &nbsp;&nbsp;
-                                descrAuto.innerHTML = autos[marca].desc
-                                    .replace(/\n/g, '<br>')
-                                    .replace(/  /g, '&nbsp;&nbsp;');
+                                descrAuto.innerHTML = autos[marca].desc 
+                                    .replace(/\n/g, '<br>') // Cambia los saltos de línea por <br>
+                                    .replace(/  /g, '&nbsp;&nbsp;'); // Cambia la descripción del modal
                                 modal.style.display = "flex"; // Muestra el modal
                         }
         });
