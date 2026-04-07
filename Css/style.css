@@ -68,14 +68,17 @@ header h1 {
 
 /* posicionamientpo de descripción de auto en modal */
 #descrAuto {
-  display: flex; /* Usa flexbox para centrar el contenido */
-  align-items: center; /* Centra verticalmente el texto dentro del contenedor */
-  justify-content: center; /* Centra horizontalmente el texto dentro del contenedor */
-  height: 200px; /* Altura del área de descripción */
+  display: flex; /* Centra el contenido usando flexbox */
+  align-items: center; /* Centra verticalmente el texto dentro del área */
+  justify-content: center; /* Centra horizontalmente el texto dentro del área */
+  height: 100%; /* Ocupa toda la altura disponible del contenedor */
+  min-height: 200px; /* Altura mínima para evitar que quede pegado arriba */
   text-align: center; /* Centra el texto */
-  font-family: Arial, sans-serif; /* Fuente Arial */
-  margin-bottom: 20px; /* Espacio debajo de la descripción */
-  margin-left: 30px; /* Separa la descripción de la imagen */
+  font-family: Arial, sans-serif; /* Fuente consistente */
+  margin: 0 auto 20px auto; /* Centrado horizontal y espacio inferior */
+  padding: 0 10px; /* Espaciado lateral para evitar que el texto toque los bordes */
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+  width: 100%; /* Ocupa todo el ancho disponible */
 }
 
 /* dimensiones de imagen de auto en modal */
