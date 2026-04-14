@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <!-- Documento en español -->
+  <head> <!-- Cabecera del documento -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive para móviles -->
+    <title>Catálogo de autos</title> <!-- Título de la pestaña -->
+    <link rel="stylesheet" href="Css/style.css"> <!-- Enlace al CSS principal -->
+  </head>
+  <body> <!-- Cuerpo de la página -->
+    <header> <!-- Encabezado -->
+      <h1>Catálogo de Autos</h1> <!-- Título principal -->
+    </header>
+
+    <div class="logos"> <!-- Contenedor de los logos de autos -->
+      <div class="logo Ford" data-marca="Ford"> <!-- Logo Ford -->
+        <img src="images/logos/Ford.jpeg" alt="Logo de Ford" class="logo-image"> <!-- Imagen Ford -->
+        FORD <!-- Texto Ford -->
+      </div>
+      <div class="logo Honda" data-marca="Honda"> <!-- Logo Honda -->
+        <img src="images/logos/Honda.jpeg" alt="Logo de Honda" class="logo-image"> <!-- Imagen Honda -->
+        HONDA <!-- Texto Honda -->
+      </div>
+      <div class="logo Toyota" data-marca="Toyota"> <!-- Logo Toyota -->
+        <img src="images/logos/Toyota.jpeg" alt="Logo de Toyota" class="logo-image"> <!-- Imagen Toyota -->
+        TOYOTA <!-- Texto Toyota -->
+      </div>
+      <div class="logo Chevrolet" data-marca="Chevrolet"> <!-- Logo Chevrolet -->
+        <img src="images/logos/Chevrolet.jpeg" alt="Logo de Chevrolet" class="logo-image"> <!-- Imagen Chevrolet -->
+        CHEVROLET <!-- Texto Chevrolet -->
+      </div>
+    </div>
+
+    <!-- Modal para mostrar imagen y descripción -->
+    <div id="modalAuto" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;"> <!-- Modal oculto por defecto -->
+      <div style="background:#fff; padding:20px; border-radius:8px; max-width:700px; min-width:350px; display:flex; flex-direction:row; align-items:center; gap:30px; position:relative;"> <!-- Contenido modal -->
+        <img id="imagenAuto" src="" alt="Auto" style="width:400px; height:400px; object-fit:contain;"> <!-- Imagen del auto -->
+        <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; height:400px;"> <!-- Columna de descripción y botón -->
+          <p id="descrAuto" style="margin-bottom:30px;"></p> <!-- Descripción del auto -->
+          <button id="botonSeleccionar" style="align-self:flex-end; padding:8px 20px; font-size:1rem;">Volver</button> <!-- Botón para volver -->
+        </div>
+      </div>
+    </div>
+
+    <p id="instrucciones" class="instrucciones">Haga click en una imágen para ver más detalles.</p>
+
+    <footer> <!-- Pie de página -->
+      <p>Esta es una página para los aficionados de autos</p> <!-- Texto del pie de página -->
+    </footer>
+    <script src="Jvscript/logos.js"></script> <!-- Script principal de interacción -->
+  </body>
+</html> <!-- Fin del documento HTML -->

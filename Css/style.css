@@ -1,0 +1,131 @@
+/* Estilos globales para todos los elementos */
+* { 
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina relleno por defecto */
+  box-sizing: border-box; /* Incluye el borde en el tamaño total */
+}
+
+body { 
+  background-color: lightgray; /* Fondo gris */
+  font-family: Arial, sans-serif; /* Fuente general */
+}
+
+header { 
+  background-color: black; /* Fondo negro en el header */
+  text-align: center; /* Centra el texto */
+  padding: 20px; /* Espaciado interno */
+}
+
+header h1 { 
+  color: white; /* Título blanco */
+  font-family: Arial, sans-serif; /* Fuente Arial */
+  font-size: 60px; /* Tamaño grande */
+  font-style: italic; /* Estilo de fuente en cursiva */
+}
+
+.logos { 
+  display: flex; /* Fila de logos */
+  justify-content: center; /* Centrado horizontal */
+  gap: 20px; /* Espacio entre logos */
+  margin: 40px 0; /* Margen arriba y abajo */
+}
+
+.logos > div {
+  width: 250px; /* Ancho de cada logo */
+  min-height: 250px; /* Altura mínima */
+  background-color: white; /* Fondo blanco */
+  border: 4px solid black; /* Borde negro */
+  display: flex; /* Columna interna */
+  flex-direction: column; /* Apila verticalmente */
+  justify-content: space-between; /* Espacio entre elementos internos */
+  align-items: center; /* Centrado interno */
+  padding: 10px; /* Espaciado interno */
+  cursor: pointer; /* Indica que el bloque es interactivo */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease; /* Suaviza el hover */
+}
+
+.logos img {
+  width: 200px; /* Ancho imagen logo */
+  height: 200px; /* Alto imagen logo */
+  object-fit: contain; /* Ajuste proporcional */
+  transition: transform 0.25s ease, filter 0.25s ease; /* Suaviza la animación de la imagen */
+}
+
+.logos > div:hover {
+  transform: translateY(-8px) scale(1.03); /* Eleva ligeramente el bloque */
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18); /* Sombra para dar profundidad */
+  border-color: #444; /* Cambia un poco el borde */
+  background-color: #f8f8f8; /* Fondo sutilmente distinto */
+}
+
+.logos > div:hover img {
+  transform: scale(1.06); /* Resalta la imagen al pasar el mouse */
+  filter: saturate(1.1) contrast(1.05); /* Mejora visual leve */
+}
+
+.contenido {
+  display: flex; /* Fila de contenido */
+  justify-content: center; /* Centrado horizontal */
+  align-items: flex-start; /* Arriba alineado */
+  gap: 40px; /* Espacio entre columnas */
+  margin: 40px auto; /* Margen vertical y centrado */
+  max-width: 900px; /* Máximo ancho */
+}
+
+/* dimensiones de ventana de modal */
+#modalAuto >div { 
+  display: flex; /* Fila de contenido modal */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */  
+  width: 800px;
+  height: 500px;
+}
+
+/* posicionamientpo de descripción de auto en modal */
+#descrAuto {
+  display: flex; /* Centra el contenido usando flexbox */
+  align-items: center; /* Centra verticalmente el texto dentro del área */
+  justify-content: center; /* Centra horizontalmente el texto dentro del área */
+  height: 100%; /* Ocupa toda la altura disponible del contenedor */
+  min-height: 200px; /* Altura mínima para evitar que quede pegado arriba */
+  text-align: center; /* Centra el texto */
+  font-family: Arial, sans-serif; /* Fuente consistente */
+  font-size: 14px; /* Tamaño de fuente legible */
+  margin: 0 auto 20px auto; /* Centrado horizontal y espacio inferior */
+  padding: 0 10px; /* Espaciado lateral para evitar que el texto toque los bordes */
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* dimensiones de imagen de auto en modal */
+#imagenAuto {
+  display: flex; /* Usa flexbox para centrar la imagen */
+  align-items: center; /* Centra verticalmente la imagen dentro del contenedor */ 
+  justify-content: center; /* Centra horizontalmente la imagen dentro del contenedor */ 
+  height: 300px; /* Altura de la imagen en el modal */  
+  width: 400px; /* Ancho de la imagen en el modal */  
+  object-fit: contain; /* Ajusta la imagen sin distorsionarla */    
+}
+
+.instrucciones {
+  text-align: center; /* Centra el texto */
+  font-family: Arial, sans-serif; /* Fuente Arial */
+  font-size: 1.8rem; /* Tamaño de fuente */
+  font-style: italic; /* Estilo de fuente en cursiva */
+  margin-bottom: 40px; /* Espacio debajo del texto */
+}
+
+footer { /* Estilos para el pie de página */
+  background-color: black; /* Fondo negro */
+  text-align: center; /* Texto centrado */
+  padding: 20px; /* Espacio interno de 20 píxeles */
+  color: white; /* Color de texto blanco */
+  position:fixed; /* Posiciona el pie de página fijo al final de la página */
+  bottom: 0; /* Coloca el pie de página al final de la página */
+  width: 100%; /* Ancho del 100% de la página */
+}
+
+footer p { /* Estilos para el párrafo dentro del pie de página */
+  color: white; /* Color de texto blanco */
+  font-family: Arial, sans-serif; /* Fuente Arial */
+}
