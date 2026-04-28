@@ -1,0 +1,1 @@
+document.getElementById("formulario_usuario").addEventListener("submit")
