@@ -130,6 +130,16 @@ header h1 {
   gap: 4px;
 }
 
+.Formulario input[type="submit"]{
+  width: 100px;
+  align-self: center;
+  padding: 4px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 footer { /* Estilos para el pie de página */
   background-color: black; /* Fondo negro */
   text-align: center; /* Texto centrado */
