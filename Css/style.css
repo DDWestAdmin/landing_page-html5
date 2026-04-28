@@ -115,6 +115,21 @@ header h1 {
   margin-bottom: 40px; /* Espacio debajo del texto */
 }
 
+.Formulario {
+  max-width: 600px;
+  width: (min-content 100%, 600px);
+  margin: 4px auto;
+  padding: 4px;
+  background-color: white;
+  border: black solid 4px;
+}
+
+.Formulario form{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 footer { /* Estilos para el pie de página */
   background-color: black; /* Fondo negro */
   text-align: center; /* Texto centrado */
