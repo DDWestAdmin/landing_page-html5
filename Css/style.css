@@ -117,7 +117,7 @@ header h1 {
 
 .Formulario {
   max-width: 600px;
-  width: (min-content 100%, 600px);
+  width: min(100%, 600px);
   margin: 4px auto;
   padding: 4px;
   background-color: white;
@@ -136,7 +136,17 @@ header h1 {
   padding: 4px;
   background-color: blue;
   color: white;
-  border: none;
+  border: black solid 4px;
+  cursor: pointer;
+}
+
+.Formulario input[type="button"]{
+  width: 100px;
+  align-self: center;
+  padding: 4px;
+  background-color: green;
+  color: white;
+  border: black solid 4px;
   cursor: pointer;
 }
 
