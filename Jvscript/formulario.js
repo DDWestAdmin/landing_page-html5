@@ -5,4 +5,4 @@ document.addEventListener("DOMContentLoaded", function() { // Espera a que el DO
     const inicioSesion = document.getElementById("boton_inicio_sesion");
     const botonInicioSesion = document.getElementById("button_signing");
 });
-    formulario.
+
