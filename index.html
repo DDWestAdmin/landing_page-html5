@@ -44,16 +44,29 @@
     <p id="instrucciones" class="instrucciones">Haga click en una imágen para ver más detalles.</p>
 
   <!-- Formulario de creación de Usuario-->
-  <div class="Formulario" id="formulario_usuario"> <!-- Contenedor del formulario -->
+  <div class="formulario" id="formulario_usuario"> <!-- Contenedor para el registro de usuarios -->
+    <input type="button" value="Registrarse" id="boton_registro"> <!-- Botón para mostrar el formulario de registro -->
+    <input type="button" value="Iniciar Sesión" id="boton_inicio_sesion"> <!-- Botón para mostrar el formulario de inicio de sesión -->
+  </div>
+
+  <div class="registro_usuario" id="registro_usuario"> <!-- Contenedor del formulario -->
     <form>
       <p>Registro de Usuario</p> <!-- Título del formulario -->
       <input type="text" name="usuario" placeholder="Nombre de Usuario" required> <!-- Campo de texto para el nombre de usuario -->
-      <input type="email" name="correo" placeholder="e-mail@correo.cl" required> <!-- Campo de texto para el correo electrónico -->
-      <input type="password" name="contraseña" placeholder="Contraseña min.8 carácteres" required> <!-- Campo de texto para la contraseña -->
-      <input type="password" name="confirmar_contraseña" placeholder="Confirmar Contraseña" required> <!-- Campo de texto para confirmar la contraseña -->
-      <input type="submit" value="Registrarse" id="button_signing"> <!-- Botón de envío del formulario -->
-      <input type="button" value="Iniciar Sesión" id="button_loging"> </input> <!-- Botón para iniciar sesión -->
+      <input type="email" name="correo" placeholder="@correo.cl" required> <!-- Campo de texto para el correo electrónico -->
+      <input type="password" name="contraseña" placeholder="Contraseña min.8 carácteres" minlength="8" required> <!-- Campo de texto para la contraseña -->
+      <input type="password" name="confirmar_contraseña" placeholder="Confirmar Contraseña" minlength="8" required> <!-- Campo de texto para confirmar la contraseña -->
+      <input type="submit" value="Registrar" id="button_register"> <!-- Botón de envío del formulario -->
     </form> 
+  </div>
+
+  <div class="validar_usuario" id="validar_usuario"> 
+    <form>
+      <p>Ingrese sus Datos</p>
+      <input type="email" name="correo" placeholder="@correo.cl" required> <!-- Campo de texto para el correo electrónico -->
+      <input type="password" name="contraseña" placeholder="Contraseña min.8 carácteres" minlength="8" required> <!-- Campo de texto para la contraseña -->
+      <input type="submit" value="Iniciar Sesión" id="button_signing"> <!-- Botón de envío del formulario -->
+    </form>
   </div>
 
   <footer> <!-- Pie de página -->

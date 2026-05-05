@@ -11,6 +11,7 @@ body {
 }
 
 header { 
+  position:relative; 
   background-color: black; /* Fondo negro en el header */
   text-align: center; /* Centra el texto */
   padding: 20px; /* Espaciado interno */
@@ -51,37 +52,44 @@ header h1 {
   transition: transform 0.25s ease, filter 0.25s ease; /* Suaviza la animación de la imagen */
 }
 
-.logos > div:hover {
-  transform: translateY(-8px) scale(1.03); /* Eleva ligeramente el bloque */
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18); /* Sombra para dar profundidad */
-  border-color: #444; /* Cambia un poco el borde */
-  background-color: #f8f8f8; /* Fondo sutilmente distinto */
+
+.formulario{ /* Contenedor registro/inicio en esquina superior derecha */
+  position: absolute; /* posiciona respecto al header (header debe ser relative) */
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: black; /* Fondo negro */ 
+  padding: 0.35rem;
+  border-radius: 6px;
+  border: 1px solid black;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  z-index: 40;
 }
 
-.logos > div:hover img {
-  transform: scale(1.06); /* Resalta la imagen al pasar el mouse */
-  filter: saturate(1.1) contrast(1.05); /* Mejora visual leve */
+.formulario input[type="button"],
+.formulario button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 1px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
-.contenido {
-  display: flex; /* Fila de contenido */
-  justify-content: center; /* Centrado horizontal */
-  align-items: flex-start; /* Arriba alineado */
-  gap: 40px; /* Espacio entre columnas */
-  margin: 40px auto; /* Margen vertical y centrado */
-  max-width: 900px; /* Máximo ancho */
+.formulario #boton_registro,
+.formulario #button_register {
+  background-color: green; /* Fondo verde para el botón de registro */
+  border: 1px solid black;
 }
 
-/* dimensiones de ventana de modal */
-#modalAuto >div { 
-  display: flex; /* Fila de contenido modal */
-  align-items: center; /* Centrado vertical */
-  justify-content: center; /* Centrado horizontal */  
-  width: 800px;
-  height: 500px;
+.formulario #boton_inicio_sesion,
+.formulario #button_signing {
+  background-color : blue; /* Fondo azul para el botón de inicio de sesión */
+  border: 1px solid black;
 }
 
-/* posicionamientpo de descripción de auto en modal */
 #descrAuto {
   display: flex; /* Centra el contenido usando flexbox */
   align-items: center; /* Centra verticalmente el texto dentro del área */
@@ -115,38 +123,33 @@ header h1 {
   margin-bottom: 40px; /* Espacio debajo del texto */
 }
 
-.Formulario {
-  max-width: 600px;
-  width: min(100%, 600px);
-  margin: 4px auto;
-  padding: 4px;
-  background-color: white;
-  border: black solid 4px;
+.formulario { /* Estilos para los contenedores de registro e inicio de sesión */
+  position: absolute; /* Posiciona el contenedor de forma absoluta */
+  top: 0.75rem; /* Ajusta la posición vertical */
+  right: 0.75rem; /* Ajusta la posición horizontal */
+  background-color: white; /* Fondo blanco */
+  border: 2.5px solid black; /* Borde negro */
+  display: flex; 
+  gap: 0.5rem; 
 }
 
-.Formulario form{
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.Formulario input[type="submit"]{
-  width: 100px;
-  align-self: center;
-  padding: 4px;
-  background-color: blue;
-  color: white;
-  border: black solid 4px;
+.formulario .boton_registro,
+.formulario #boton_register {
+  background: green; /* Fondo verde para el botón de registro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 1px; /* Bordes redondeados */
+  padding: 5px 10px; 
   cursor: pointer;
 }
 
-.Formulario input[type="button"]{
-  width: 100px;
-  align-self: center;
-  padding: 4px;
-  background-color: green;
-  color: white;
-  border: black solid 4px;
+.formulario, .boton_inicio_sesion,
+.formulario #button_signing {
+  background: blue; /* Fondo azul para el botón de inicio de sesión */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 1px; /* Bordes redondeados */
+  padding: 5px 10px; 
   cursor: pointer;
 }
 
