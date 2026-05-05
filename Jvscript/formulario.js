@@ -4,5 +4,5 @@ document.addEventListener("DOMContentLoaded", function() { // Espera a que el DO
     const botonregistro = document.getElementById("button_register");
     const inicioSesion = document.getElementById("boton_inicio_sesion");
     const botonInicioSesion = document.getElementById("button_signing");
-
+});
     formulario.
