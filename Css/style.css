@@ -56,27 +56,27 @@ header h1 {
   position: absolute; /* Posiciona el contenedor de forma absoluta */
   top: 0.75rem; /* Ajusta la posición vertical */
   right: 0.75rem; /* Ajusta la posición horizontal */
-  background-color: rgb(255, 255, 255); /* Fondo blanco */
+  background-color: black; /* Fondo negro */
   border: 2.5px solid black; /* Borde negro */
   display: flex; 
   gap: 0.5rem; 
 }
 
-.formulario .boton_registro,
-.formulario #boton_register {
+.formulario #boton_registro,
+#boton_register {
   background-color: green; /* Fondo verde para el botón de registro */
   color: white; /* Texto blanco */
-  border: none; /* Sin borde */
-  border-radius: 1px; /* Bordes redondeados */
+  border: 1px solid black; /* Borde negro */
+  border-radius: 1px solid; /* Bordes redondeados */
   padding: 5px 10px; 
   cursor: pointer;
 }
 
-.formulario .boton_inicio_sesion,
-.formulario #button_signing {
+.formulario #boton_inicio_sesion,
+#button_signing {
   background-color: blue; /* Fondo azul para el botón de inicio de sesión */
   color: white; /* Texto blanco */
-  border: none; /* Sin borde */
+  border: 1px solid black; /* Borde negro */
   border-radius: 1px; /* Bordes redondeados */
   padding: 5px 10px; 
   cursor: pointer;
