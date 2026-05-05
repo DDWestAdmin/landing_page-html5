@@ -52,42 +52,34 @@ header h1 {
   transition: transform 0.25s ease, filter 0.25s ease; /* Suaviza la animación de la imagen */
 }
 
-
-.formulario{ /* Contenedor registro/inicio en esquina superior derecha */
-  position: absolute; /* posiciona respecto al header (header debe ser relative) */
-  top: 0.75rem;
-  right: 0.75rem;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  background-color: black; /* Fondo negro */ 
-  padding: 0.35rem;
-  border-radius: 6px;
-  border: 1px solid black;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
-  z-index: 40;
+.formulario { /* Estilos para los contenedores de registro e inicio de sesión */
+  position: absolute; /* Posiciona el contenedor de forma absoluta */
+  top: 0.75rem; /* Ajusta la posición vertical */
+  right: 0.75rem; /* Ajusta la posición horizontal */
+  background-color: rgb(255, 255, 255); /* Fondo blanco */
+  border: 2.5px solid black; /* Borde negro */
+  display: flex; 
+  gap: 0.5rem; 
 }
 
-.formulario input[type="button"],
-.formulario button {
-  background-color: transparent;
-  color: white;
-  border: none;
-  border-radius: 1px;
-  padding: 5px 10px;
+.formulario .boton_registro,
+.formulario #boton_register {
+  background-color: green; /* Fondo verde para el botón de registro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 1px; /* Bordes redondeados */
+  padding: 5px 10px; 
   cursor: pointer;
 }
 
-.formulario #boton_registro,
-.formulario #button_register {
-  background-color: green; /* Fondo verde para el botón de registro */
-  border: 1px solid black;
-}
-
-.formulario #boton_inicio_sesion,
+.formulario .boton_inicio_sesion,
 .formulario #button_signing {
-  background-color : blue; /* Fondo azul para el botón de inicio de sesión */
-  border: 1px solid black;
+  background-color: blue; /* Fondo azul para el botón de inicio de sesión */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 1px; /* Bordes redondeados */
+  padding: 5px 10px; 
+  cursor: pointer;
 }
 
 #descrAuto {
@@ -121,36 +113,6 @@ header h1 {
   font-size: 1.8rem; /* Tamaño de fuente */
   font-style: italic; /* Estilo de fuente en cursiva */
   margin-bottom: 40px; /* Espacio debajo del texto */
-}
-
-.formulario { /* Estilos para los contenedores de registro e inicio de sesión */
-  position: absolute; /* Posiciona el contenedor de forma absoluta */
-  top: 0.75rem; /* Ajusta la posición vertical */
-  right: 0.75rem; /* Ajusta la posición horizontal */
-  background-color: white; /* Fondo blanco */
-  border: 2.5px solid black; /* Borde negro */
-  display: flex; 
-  gap: 0.5rem; 
-}
-
-.formulario .boton_registro,
-.formulario #boton_register {
-  background: green; /* Fondo verde para el botón de registro */
-  color: white; /* Texto blanco */
-  border: none; /* Sin borde */
-  border-radius: 1px; /* Bordes redondeados */
-  padding: 5px 10px; 
-  cursor: pointer;
-}
-
-.formulario, .boton_inicio_sesion,
-.formulario #button_signing {
-  background: blue; /* Fondo azul para el botón de inicio de sesión */
-  color: white; /* Texto blanco */
-  border: none; /* Sin borde */
-  border-radius: 1px; /* Bordes redondeados */
-  padding: 5px 10px; 
-  cursor: pointer;
 }
 
 footer { /* Estilos para el pie de página */
