@@ -53,7 +53,8 @@
     <p>Ingrese sus datos</p>
     <input type="email" name="correo" placeholder="@correo.cl" required> <!-- Campo de texto para el correo electrónico -->
     <input type="password" name="contraseña" placeholder="Contraseña min.8" minlength="8" required> <!-- Campo de texto para la contraseña -->
-    <input type="submit" value="Iniciar Sesión" id="button_signing">
+    <input type="submit" value="Iniciar Sesión" id="button_signing"> <!-- Botón de envío del formulario -->
+    <input type="button" value="Volver" id="button_exit_signing"> <!-- Botón para volver al menú principal -->
   </div>
 
   <div class="registro_usuario" id="registro_usuario"> <!-- Contenedor del formulario -->
@@ -64,6 +65,7 @@
       <input type="password" name="contraseña" placeholder="Contraseña min.8 carácteres" minlength="8" required> <!-- Campo de texto para la contraseña -->
       <input type="password" name="confirmar_contraseña" placeholder="Confirmar Contraseña" minlength="8" required> <!-- Campo de texto para confirmar la contraseña -->
       <input type="submit" value="Registrar" id="button_register"> <!-- Botón de envío del formulario -->
+      <input type="button" value="Volver" id="button_exit_register"> <!-- Botón para volver al menú principal -->
     </form> 
   </div>
 
@@ -71,5 +73,6 @@
     <p>Esta es una página para los aficionados de autos</p> <!-- Texto del pie de página -->
   </footer>
   <script src="Jvscript/logos.js"></script> <!-- Script principal de interacción -->
+  <script src="Jvscript/formulario.js"></script> <!-- Script para modal de formulario -->
   </body>
 </html> <!-- Fin del documento HTML -->

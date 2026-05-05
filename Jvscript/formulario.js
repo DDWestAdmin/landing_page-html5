@@ -6,3 +6,4 @@ document.addEventListener("DOMContentLoaded", function() { // Espera a que el DO
     const botonInicioSesion = document.getElementById("button_signing"); // Referencia al botón de envío del formulario de inicio de sesión
 });
 
+    
