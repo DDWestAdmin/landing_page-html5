@@ -49,6 +49,13 @@
     <input type="button" value="Iniciar Sesión" id="boton_inicio_sesion"> <!-- Botón para mostrar el formulario de inicio de sesión -->
   </div>
 
+  <div class="inicio_sesion_usuario" id="inicio_sesion">
+    <p>Ingrese sus datos</p>
+    <input type="email" name="correo" placeholder="@correo.cl" required> <!-- Campo de texto para el correo electrónico -->
+    <input type="password" name="contraseña" placeholder="Contraseña min.8" minlength="8" required> <!-- Campo de texto para la contraseña -->
+    <input type="submit" value="Iniciar Sesión" id="button_signing">
+  </div>
+
   <div class="registro_usuario" id="registro_usuario"> <!-- Contenedor del formulario -->
     <form>
       <p>Registro de Usuario</p> <!-- Título del formulario -->
@@ -58,15 +65,6 @@
       <input type="password" name="confirmar_contraseña" placeholder="Confirmar Contraseña" minlength="8" required> <!-- Campo de texto para confirmar la contraseña -->
       <input type="submit" value="Registrar" id="button_register"> <!-- Botón de envío del formulario -->
     </form> 
-  </div>
-
-  <div class="validar_usuario" id="validar_usuario"> 
-    <form>
-      <p>Ingrese sus Datos</p>
-      <input type="email" name="correo" placeholder="@correo.cl" required> <!-- Campo de texto para el correo electrónico -->
-      <input type="password" name="contraseña" placeholder="Contraseña min.8 carácteres" minlength="8" required> <!-- Campo de texto para la contraseña -->
-      <input type="submit" value="Iniciar Sesión" id="button_signing"> <!-- Botón de envío del formulario -->
-    </form>
   </div>
 
   <footer> <!-- Pie de página -->
