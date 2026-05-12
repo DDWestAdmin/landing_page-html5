@@ -93,23 +93,22 @@ header h1 {
 
 /* Contenedor que agrupa los botones de sesión/registro */
 .formulario {
-  /* Posición en el flujo normal para quedar debajo del header */
-  position: static;
-  /* Separación vertical y centrado horizontal */
-  margin: 1rem auto;
-  /* Fondo oscuro del contenedor */
-  background-color: black;
-  /* Borde alrededor del contenedor */
-  border: 2.5px solid black;
-  /* Usa flexbox para alinear botones */
+  /* Posición absoluta respecto al viewport (queda en la esquina superior derecha) */
+  position: fixed;
+  /* Separación desde el borde superior (coincide con header padding) */
+  top: 20px;
+  /* Separación desde el borde derecho */
+  right: 16px;
+  /* Asegura que esté visible encima de otros elementos */
+  z-index: 999;
+  /* Mantener fondo transparente para integrarse con header */
+  background-color: transparent;
+  /* Sin borde por defecto */
+  border: none;
   display: flex;
-  /* Espacio entre botones */
   gap: 0.5rem;
-  /* Centrado interno de botones */
-  justify-content: center;
   align-items: center;
-  /* Pequeño padding alrededor de los botones */
-  padding: 0.25rem 0.5rem;
+  padding: 0;
 }
 
 .formulario #boton_registro,
