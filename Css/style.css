@@ -1,179 +1,301 @@
 /* Estilos globales para todos los elementos */
-* { 
-  margin: 0; /* Elimina márgenes por defecto */
-  padding: 0; /* Elimina relleno por defecto */
-  box-sizing: border-box; /* Incluye el borde en el tamaño total */
+/* Selector universal: aplica a todos los elementos */
+* {
+  /* Reinicia margen por defecto del navegador */
+  margin: 0;
+  /* Reinicia padding por defecto del navegador */
+  padding: 0;
+  /* Incluye borde y padding en el cálculo del ancho/alto */
+  box-sizing: border-box;
 }
 
-body { 
-  background-color: lightgray; /* Fondo gris */
-  font-family: Arial, sans-serif; /* Fuente general */
+/* Estilos del elemento <body> */
+body {
+  /* Color de fondo de la página */
+  background-color: lightgray;
+  /* Fuente por defecto de todo el documento */
+  font-family: Arial, sans-serif;
 }
 
-header { 
-  position:relative; 
-  background-color: black; /* Fondo negro en el header */
-  text-align: center; /* Centra el texto */
-  padding: 20px; /* Espaciado interno */
+/* Estilos para el encabezado principal */
+header {
+  /* Permite posicionar elementos relativos dentro del header */
+  position:relative;
+  /* Fondo del header */
+  background-color: black;
+  /* Centra el contenido de texto */
+  text-align: center;
+  /* Espacio interior del header */
+  padding: 20px;
 }
 
-header h1 { 
-  color: white; /* Título blanco */
-  font-family: Arial, sans-serif; /* Fuente Arial */
-  font-size: 60px; /* Tamaño grande */
-  font-style: italic; /* Estilo de fuente en cursiva */
+/* Estilos específicos para el título principal dentro del header */
+header h1 {
+  /* Color del texto del título */
+  color: white;
+  /* Fuente del título (asegura consistencia) */
+  font-family: Arial, sans-serif;
+  /* Tamaño grande para visibilidad */
+  font-size: 60px;
+  /* Texto en cursiva */
+  font-style: italic;
 }
 
-.logos { 
-  display: flex; /* Fila de logos */
-  justify-content: center; /* Centrado horizontal */
-  gap: 20px; /* Espacio entre logos */
-  margin: 40px 0; /* Margen arriba y abajo */
+/* Contenedor de logos de marcas */
+.logos {
+  /* Usa flexbox para disponer logos en fila */
+  display: flex;
+  /* Centra los items horizontalmente */
+  justify-content: center;
+  /* Separación entre elementos hijos */
+  gap: 20px;
+  /* Margen vertical para separar de otras secciones */
+  margin: 40px 0;
 }
 
+/* Estilos para cada bloque de logo dentro de .logos */
 .logos > div {
-  width: 250px; /* Ancho de cada logo */
-  min-height: 250px; /* Altura mínima */
-  background-color: white; /* Fondo blanco */
-  border: 4px solid black; /* Borde negro */
-  display: flex; /* Columna interna */
-  flex-direction: column; /* Apila verticalmente */
-  justify-content: space-between; /* Espacio entre elementos internos */
-  align-items: center; /* Centrado interno */
-  padding: 10px; /* Espaciado interno */
-  cursor: pointer; /* Indica que el bloque es interactivo */
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease; /* Suaviza el hover */
+  /* Ancho fijo del bloque */
+  width: 250px;
+  /* Altura mínima garantizada */
+  min-height: 250px;
+  /* Fondo del bloque */
+  background-color: white;
+  /* Borde visible alrededor del bloque */
+  border: 4px solid black;
+  /* Usa flexbox para su contenido interno */
+  display: flex;
+  /* Direcciona el contenido en columna */
+  flex-direction: column;
+  /* Distribuye espacio entre elementos internos */
+  justify-content: space-between;
+  /* Centra horizontalmente los elementos hijos */
+  align-items: center;
+  /* Espacio interior del bloque */
+  padding: 10px;
+  /* Cursor indica que es interactivo (clickable) */
+  cursor: pointer;
+  /* Transiciones suaves para efectos visuales */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
 }
 
+/* Estilos para las imágenes dentro de los bloques de logo */
 .logos img {
-  width: 200px; /* Ancho imagen logo */
-  height: 200px; /* Alto imagen logo */
-  object-fit: contain; /* Ajuste proporcional */
-  transition: transform 0.25s ease, filter 0.25s ease; /* Suaviza la animación de la imagen */
+  /* Ancho fijo para las imágenes */
+  width: 200px;
+  /* Alto fijo para las imágenes */
+  height: 200px;
+  /* Mantiene proporciones y recorta si es necesario */
+  object-fit: contain;
+  /* Transición para animaciones suaves */
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-.formulario { /* Estilos para los contenedores de registro e inicio de sesión */
-  position: absolute; /* Posiciona el contenedor de forma absoluta */
-  top: 0.75rem; /* Ajusta la posición vertical */
-  right: 0.75rem; /* Ajusta la posición horizontal */
-  background-color: black; /* Fondo negro */
-  border: 2.5px solid black; /* Borde negro */
-  display: flex; 
-  gap: 0.5rem; 
+/* Contenedor que agrupa los botones de sesión/registro */
+.formulario {
+  /* Posición en el flujo normal para quedar debajo del header */
+  position: static;
+  /* Separación vertical y centrado horizontal */
+  margin: 1rem auto;
+  /* Fondo oscuro del contenedor */
+  background-color: black;
+  /* Borde alrededor del contenedor */
+  border: 2.5px solid black;
+  /* Usa flexbox para alinear botones */
+  display: flex;
+  /* Espacio entre botones */
+  gap: 0.5rem;
+  /* Centrado interno de botones */
+  justify-content: center;
+  align-items: center;
+  /* Pequeño padding alrededor de los botones */
+  padding: 0.25rem 0.5rem;
 }
 
 .formulario #boton_registro,
 .formulario #boton_inicio_sesion{
-  /* Dimensiones iguales para ambos botones */
-  width: 140px; /* Ancho fijo igual */
+  /* Ancho fijo para asegurar ambos botones igual tamaño */
+  width: 140px;
+  /* Mínimo ancho igual al ancho deseado */
   min-width: 140px;
-  height: 42px; /* Alto fijo igual */
+  /* Alto fijo para coherencia visual */
+  height: 42px;
+  /* Mínimo alto igual */
   min-height: 42px;
+  /* Usamos inline-flex para centrar contenido interno */
   display: inline-flex;
+  /* Alineación vertical del contenido interno */
   align-items: center;
+  /* Centra el texto horizontalmente */
   justify-content: center;
+  /* Asegura que padding se incluya en las dimensiones */
   box-sizing: border-box;
-  color: white; /* Texto en blanco */
-  border: 1px solid black; /* Borde negro */
-  border-radius: 4px; /* Bordes ligeramente redondeados */
-  padding: 8px 12px; /* Espaciado interno */
+  /* Color del texto */
+  color: white;
+  /* Borde visible alrededor del botón */
+  border: 1px solid black;
+  /* Bordes ligeramente redondeados */
+  border-radius: 4px;
+  /* Relleno interno para separación del texto */
+  padding: 8px 12px;
+  /* Cursor de puntero para indicar clicable */
   cursor: pointer;
 }
 
+/* Color específico para cada botón, separado para no alterar dimensiones */
 .formulario #boton_registro{ background-color: green; }
 .formulario #boton_inicio_sesion{ background-color: blue; }
 
 .inicio_sesion {
+  /* Contenedor oculto por defecto (se usa en la versión no-modal) */
   display: none;
+  /* Posición fija para centrar en pantalla si se activa */
   position: fixed;
+  /* Fondo blanco para contraste */
   background-color: white;
+  /* Centrado con flexbox cuando se muestre */
   align-items: center;
   justify-content: center;
+  /* Espaciado interno */
   padding: 10px;
 }
 
 .inicio_sesion.active {
-  display:flex
+  /* Muestra el contenedor cuando tiene la clase .active */
+  display:flex;
 }
 
 .inicio_sesion #inicio_sesion {
+  /* Caja interna de inicio de sesión (estilos de tamaño y presentación) */
   width: auto;
   height: auto;
+  /* Altura mínima para contener elementos */
   min-height: 280px;
+  /* Ancho mínimo legible */
   min-width: 320px;
+  /* Espacio interior */
   padding: 10px;
+  /* Sin margen externo */
   margin: 0;
+  /* Borde visible alrededor de la caja */
   border: 4px solid black;
+  /* Radio de borde (casi cuadrado) */
   border-radius: 1px;
+  /* Color de texto dentro de la caja */
   color: black;
+  /* Flexbox para disponer inputs en columna */
   display: flex;
   flex-direction: column;
+  /* Espacio entre elementos internos */
   gap: 10px;
+  /* Estira los items al ancho del contenedor */
   align-items: stretch;
+  /* Centra verticalmente el contenido */
   justify-content: center;
 }
 
 .inicio_sesion #inicio_sesion p {
+  /* Estilo para el párrafo dentro de la caja de inicio */
   color: black;
+  /* Fuente para mantener consistencia con el resto */
   font-family: Arial, sans-serif;
 }
 
 .inicio_sesion #inicio_sesion input[type="email"],
 .inicio_sesion #inicio_sesion input[type="password"] {
+  /* Anchura específica para inputs dentro de inicio de sesión */
   width: 120px;
+  /* Altura automática según fuente/padding */
   height: auto;
+  /* Color del texto dentro del input */
   color: black;
-} 
+}
 
 .inicio_sesion #button_signing{
+  /* Color de fondo del botón de firma (cuando se use) */
   background-color: blue;
-
 }
 
+/* Estilos para la descripción dentro del modal de auto */
 #descrAuto {
-  display: flex; /* Centra el contenido usando flexbox */
-  align-items: center; /* Centra verticalmente el texto dentro del área */
-  justify-content: center; /* Centra horizontalmente el texto dentro del área */
-  height: 100%; /* Ocupa toda la altura disponible del contenedor */
-  min-height: 200px; /* Altura mínima para evitar que quede pegado arriba */
-  text-align: center; /* Centra el texto */
-  font-family: Arial, sans-serif; /* Fuente consistente */
-  font-size: 14px; /* Tamaño de fuente legible */
-  margin: 0 auto 20px auto; /* Centrado horizontal y espacio inferior */
-  padding: 0 10px; /* Espaciado lateral para evitar que el texto toque los bordes */
-  box-sizing: border-box; /* Incluye padding en el ancho total */
-  width: 100%; /* Ocupa todo el ancho disponible */
+  /* Usa flexbox para centrar el contenido */
+  display: flex;
+  /* Centrado vertical */
+  align-items: center;
+  /* Centrado horizontal */
+  justify-content: center;
+  /* Ocupa toda la altura del contenedor padre */
+  height: 100%;
+  /* Altura mínima para legibilidad */
+  min-height: 200px;
+  /* Centra el texto en múltiples líneas */
+  text-align: center;
+  /* Fuente consistente con el resto */
+  font-family: Arial, sans-serif;
+  /* Tamaño de fuente */
+  font-size: 14px;
+  /* Márgenes: arriba 0, auto lateral, 20px abajo */
+  margin: 0 auto 20px auto;
+  /* Espaciado lateral interno */
+  padding: 0 10px;
+  /* Incluye padding en el cálculo de ancho */
+  box-sizing: border-box;
+  /* Ancho completo del contenedor */
+  width: 100%;
 }
 
-/* dimensiones de imagen de auto en modal */
+/* Dimensiones y presentación de la imagen dentro del modal */
 #imagenAuto {
-  display: flex; /* Usa flexbox para centrar la imagen */
-  align-items: center; /* Centra verticalmente la imagen dentro del contenedor */ 
-  justify-content: center; /* Centra horizontalmente la imagen dentro del contenedor */ 
-  height: 300px; /* Altura de la imagen en el modal */  
-  width: 400px; /* Ancho de la imagen en el modal */  
-  object-fit: contain; /* Ajusta la imagen sin distorsionarla */    
+  /* Usa flexbox para facilitar centrado si se aplica */
+  display: flex;
+  /* Alineación vertical */
+  align-items: center;
+  /* Alineación horizontal */
+  justify-content: center;
+  /* Alto fijo para el área de imagen */
+  height: 300px;
+  /* Ancho fijo para el área de imagen */
+  width: 400px;
+  /* Ajusta la imagen manteniendo proporciones */
+  object-fit: contain;
 }
 
 .instrucciones {
-  text-align: center; /* Centra el texto */
-  font-family: Arial, sans-serif; /* Fuente Arial */
-  font-size: 1.2rem; /* Tamaño de fuente */
-  font-style: italic; /* Estilo de fuente en cursiva */
-  margin-bottom: 40px; /* Espacio debajo del texto */
+  /* Estilos para el texto de instrucciones */
+  /* Centra el contenido de texto */
+  text-align: center;
+  /* Fuente consistente con el resto */
+  font-family: Arial, sans-serif;
+  /* Tamaño legible en rem */
+  font-size: 1.2rem;
+  /* Texto en cursiva para énfasis */
+  font-style: italic;
+  /* Espacio por debajo para separar secciones */
+  margin-bottom: 40px;
 }
 
-footer { /* Estilos para el pie de página */
-  background-color: black; /* Fondo negro */
-  text-align: center; /* Texto centrado */
-  padding: 20px; /* Espacio interno de 20 píxeles */
-  color: white; /* Color de texto blanco */
-  position:fixed; /* Posiciona el pie de página fijo al final de la página */
-  bottom: 0; /* Coloca el pie de página al final de la página */
-  width: 100%; /* Ancho del 100% de la página */
+/* Estilos del pie de página */
+footer {
+  /* Fondo oscuro para el footer */
+  background-color: black;
+  /* Centra el texto dentro del footer */
+  text-align: center;
+  /* Espacio interior */
+  padding: 20px;
+  /* Color del texto dentro del footer */
+  color: white;
+  /* Fija el footer en la parte inferior de la ventana */
+  position:fixed;
+  /* Colocado en la parte inferior */
+  bottom: 0;
+  /* Ocupa todo el ancho de la ventana */
+  width: 100%;
 }
 
-footer p { /* Estilos para el párrafo dentro del pie de página */
-  color: white; /* Color de texto blanco */
-  font-family: Arial, sans-serif; /* Fuente Arial */
+/* Estilos para el párrafo dentro del footer */
+footer p {
+  /* Color del texto */
+  color: white;
+  /* Fuente del texto */
+  font-family: Arial, sans-serif;
 }
