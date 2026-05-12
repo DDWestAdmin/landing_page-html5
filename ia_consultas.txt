@@ -16,3 +16,7 @@ index.html, login_usuario.js, css.styles
 mostrar en el header nombre de usuario y 
 añadir evento click que habra modal con boton 
 para cerrar sesión usuario
+
+index.html, css.styles
+instrucciones:
+añade función carrusel bootstrap debajo del header
