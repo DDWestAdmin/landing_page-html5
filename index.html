@@ -1,87 +1,124 @@
-<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
-<html lang="es"> <!-- Documento en español -->
-  <head> <!-- Cabecera del documento -->
-    <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive para móviles -->
-    <title>Catálogo de autos</title> <!-- Título de la pestaña -->
-    <link rel="stylesheet" href="Css/style.css"> <!-- Enlace al CSS principal -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> <!-- Enlace a Bootstrap CSS -->
+<!-- Declara que el documento sigue la especificación HTML5 -->
+<!DOCTYPE html>
+<!-- Elemento raíz; idioma principal del documento: español -->
+<html lang="es">
+  <!-- Cabecera con metadatos y enlaces a estilos -->
+  <head>
+    <!-- Define codificación de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Control de viewport para diseño responsive en móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Catálogo de autos</title>
+    <!-- Enlace a la hoja de estilos local del proyecto -->
+    <link rel="stylesheet" href="Css/style.css">
+    <!-- Enlace a Bootstrap CSS desde CDN para utilidades y componentes -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
-  <body> <!-- Cuerpo de la página -->
-    <header> <!-- Encabezado -->
-      <h1>Catálogo de Autos-2026</h1> <!-- Título principal -->
+  <!-- Cuerpo visible de la página -->
+  <body>
+    <!-- Encabezado visual con título -->
+    <header>
+      <!-- Título principal mostrado al usuario -->
+      <h1>Catálogo de Autos-2026</h1>
     </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> <!-- Enlace a Bootstrap JS -->
+    <!-- Carga el bundle JS de Bootstrap para modales y comportamiento interactivo -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-    <div class="logos"> <!-- Contenedor de los logos de autos -->
-      <div class="logo Ford" data-marca="Ford"> <!-- Logo Ford -->
-        <img src="images/logos/Ford.jpeg" alt="Logo de Ford" class="logo-image"> <!-- Imagen Ford -->
-        FORD <!-- Texto Ford -->
+    <!-- Contenedor principal de logos de marcas -->
+    <div class="logos">
+      <!-- Bloque de marca Ford con atributo data para identificarla en JS -->
+      <div class="logo Ford" data-marca="Ford">
+        <!-- Imagen del logo de Ford -->
+        <img src="images/logos/Ford.jpeg" alt="Logo de Ford" class="logo-image">
+        <!-- Texto visible de la marca -->
+        FORD
       </div>
-      <div class="logo Honda" data-marca="Honda"> <!-- Logo Honda -->
-        <img src="images/logos/Honda.jpeg" alt="Logo de Honda" class="logo-image"> <!-- Imagen Honda -->
-        HONDA <!-- Texto Honda -->
+      <!-- Bloque de marca Honda -->
+      <div class="logo Honda" data-marca="Honda">
+        <img src="images/logos/Honda.jpeg" alt="Logo de Honda" class="logo-image">
+        HONDA
       </div>
-      <div class="logo Toyota" data-marca="Toyota"> <!-- Logo Toyota -->
-        <img src="images/logos/Toyota.jpeg" alt="Logo de Toyota" class="logo-image"> <!-- Imagen Toyota -->
-        TOYOTA <!-- Texto Toyota -->
+      <!-- Bloque de marca Toyota -->
+      <div class="logo Toyota" data-marca="Toyota">
+        <img src="images/logos/Toyota.jpeg" alt="Logo de Toyota" class="logo-image">
+        TOYOTA
       </div>
-      <div class="logo Chevrolet" data-marca="Chevrolet"> <!-- Logo Chevrolet -->
-        <img src="images/logos/Chevrolet.jpeg" alt="Logo de Chevrolet" class="logo-image"> <!-- Imagen Chevrolet -->
-        CHEVROLET <!-- Texto Chevrolet -->
+      <!-- Bloque de marca Chevrolet -->
+      <div class="logo Chevrolet" data-marca="Chevrolet">
+        <img src="images/logos/Chevrolet.jpeg" alt="Logo de Chevrolet" class="logo-image">
+        CHEVROLET
       </div>
     </div>
 
-    <!-- Modal para mostrar imagen y descripción -->
-    <div id="modalAuto" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;"> <!-- Modal oculto por defecto -->
-      <div style="background:#fff; padding:20px; border-radius:8px; max-width:700px; min-width:350px; display:flex; flex-direction:row; align-items:center; gap:30px; position:relative;"> <!-- Contenido modal -->
-        <img id="imagenAuto" src="" alt="Auto" style="width:400px; height:400px; object-fit:contain;"> <!-- Imagen del auto -->
-        <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; height:400px;"> <!-- Columna de descripción y botón -->
-          <p id="descrAuto" style="margin-bottom:30px;"></p> <!-- Descripción del auto -->
-          <button id="botonSeleccionar" style="align-self:flex-end; padding:8px 20px; font-size:1rem;">Volver</button> <!-- Botón para volver -->
+    <!-- Modal personalizado para mostrar imagen y descripción (oculto por defecto) -->
+    <div id="modalAuto" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
+      <!-- Caja interior del modal con diseño en fila -->
+      <div style="background:#fff; padding:20px; border-radius:8px; max-width:700px; min-width:350px; display:flex; flex-direction:row; align-items:center; gap:30px; position:relative;">
+        <!-- Imagen que se actualizará dinámicamente desde JS -->
+        <img id="imagenAuto" src="" alt="Auto" style="width:400px; height:400px; object-fit:contain;">
+        <!-- Columna para descripción y botón -->
+        <div style="flex:1; display:flex; flex-direction:column; justify-content:space-between; height:400px;">
+          <!-- Párrafo con descripción dinámica del auto -->
+          <p id="descrAuto" style="margin-bottom:30px;"></p>
+          <!-- Botón para cerrar/volver; la acción la define JS -->
+          <button id="botonSeleccionar" style="align-self:flex-end; padding:8px 20px; font-size:1rem;">Volver</button>
         </div>
       </div>
     </div>
 
+    <!-- Mensaje de instrucciones para el usuario -->
     <p id="instrucciones" class="instrucciones">Haga click en una imágen para ver más detalles.</p>
 
-  <!-- Formulario de creación de Usuario -->
-  <div class="formulario" id="formulario_usuario"> <!-- Contenedor para el registro de usuario -->
+  <!-- Sección de botones para iniciar sesión / registro -->
+  <div class="formulario" id="formulario_usuario">
+    <!-- Grupo de botones Bootstrap para acciones relacionadas al usuario -->
     <div class="btn-group" role="group" aria-label="Acciones">
+      <!-- Botón que abre el modal de inicio de sesión -->
       <button type="button" id="boton_inicio_sesion" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inicioSesionModal">Iniciar Sesión</button>
+      <!-- Botón que abre el modal de registro -->
       <button type="button" id="boton_registro" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registroModal">Registrarse</button>
     </div>
   </div>
 
-  <!-- Modal: Inicio de sesión (mantiene textos y atributos) -->
+  <!-- Modal Bootstrap para inicio de sesión; mantiene ids y atributos esperados por JS -->
   <div class="modal fade" id="inicioSesionModal" tabindex="-1" aria-labelledby="inicioSesionLabel" aria-hidden="true">
+    <!-- Contenedor del diálogo modal (Bootstrap) -->
     <div class="modal-dialog">
       <div class="modal-content">
+        <!-- Header del modal con título y botón de cierre -->
         <div class="modal-header">
           <h5 class="modal-title" id="inicioSesionLabel">Iniciar Sesión</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
+        <!-- Cuerpo del modal con campos de entrada -->
         <div class="modal-body">
           <p>Ingrese sus datos</p>
           <div class="mb-3">
+            <!-- Label asociado al input de correo -->
             <label for="inicio-email" class="form-label">Correo</label>
+            <!-- Input de correo con placeholder y validación required -->
             <input id="inicio-email" type="email" name="correo" class="form-control" placeholder="@correo.cl" required>
           </div>
           <div class="mb-3">
             <label for="inicio-password" class="form-label">Contraseña</label>
+            <!-- Input de contraseña con minlength y required -->
             <input id="inicio-password" type="password" name="contraseña" class="form-control" placeholder="Contraseña min.8" minlength="8" required>
           </div>
         </div>
+        <!-- Footer del modal con botones de acción -->
         <div class="modal-footer">
+          <!-- Botón que dispara la acción de login (manejado por JS) -->
           <button type="button" id="button_signing" class="btn btn-primary">Iniciar Sesión</button>
+          <!-- Botón para cerrar el modal sin acción -->
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="button_exit_signing">Volver</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal: Registro de usuario (mantiene valores y placeholders) -->
+  <!-- Modal Bootstrap para registro de usuario; mantiene placeholders y nombres de campo -->
   <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -90,6 +127,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
+          <!-- Formulario interno para capturar datos de registro -->
           <form id="registroForm">
             <div class="mb-3">
               <label for="registro-usuario" class="form-label">Nombre de Usuario</label>
@@ -110,17 +148,21 @@
           </form>
         </div>
         <div class="modal-footer">
+          <!-- Botón que envía el formulario `registroForm` -->
           <button type="submit" form="registroForm" class="btn btn-success" id="button_register">Registrar</button>
+          <!-- Botón para cerrar el modal sin enviar -->
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="button_exit_register">Volver</button>
         </div>
       </div>
     </div>
   </div>
 
-  <footer> <!-- Pie de página -->
-    <p>Esta es una página para los aficionados de autos</p> <!-- Texto del pie de página -->
+  <!-- Pie de página con texto informativo -->
+  <footer>
+    <p>Esta es una página para los aficionados de autos</p>
   </footer>
-  <script src="Jvscript/logos.js"></script> <!-- Script principal de interacción -->
-  <script src="Jvscript/formulario.js"></script> <!-- Script para modal de formulario -->
+  <!-- Scripts locales del proyecto para interacción con logos y formularios -->
+  <script src="Jvscript/logos.js"></script>
+  <script src="Jvscript/formulario.js"></script>
   </body>
-</html> <!-- Fin del documento HTML -->
+</html>
