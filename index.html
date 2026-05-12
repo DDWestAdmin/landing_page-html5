@@ -80,6 +80,11 @@
       <!-- Botón que abre el modal de registro -->
       <button type="button" id="boton_registro" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registroModal">Registrarse</button>
     </div>
+    <!-- Área para mostrar usuario logueado y botón de cerrar sesión (oculta por defecto) -->
+    <div id="usuario_info" style="display:none; margin-top:10px; display:flex; align-items:center; gap:10px;">
+      <span id="usuarioLogueado"></span>
+      <button type="button" id="button_logout" class="btn btn-danger">Cerrar sesión</button>
+    </div>
   </div>
 
   <!-- Modal Bootstrap para inicio de sesión; mantiene ids y atributos esperados por JS -->
@@ -164,5 +169,6 @@
   <!-- Scripts locales del proyecto para interacción con logos y formularios -->
   <script src="Jvscript/logos.js"></script>
   <script src="Jvscript/form_usuario.js"></script>
+  <script src="Jvscript/login_usuario.js"></script>
   </body>
 </html>
