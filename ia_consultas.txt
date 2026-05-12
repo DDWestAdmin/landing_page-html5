@@ -11,3 +11,8 @@ añadir boton para salir de sesión
 
 login_usuario.js, form_usuario.js
 arreglo de sintaxis de ids para form_usuario.js y login_usuario.js
+
+index.html, login_usuario.js, css.styles
+mostrar en el header nombre de usuario y 
+añadir evento click que habra modal con boton 
+para cerrar sesión usuario
