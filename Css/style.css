@@ -310,6 +310,7 @@ header #header_usuario {
 
 /* Carousel images sizing */
 .carousel-img {
+  /* Altura fija para el carrusel y recorte proporcional */
   height: 360px;
   object-fit: cover;
 }

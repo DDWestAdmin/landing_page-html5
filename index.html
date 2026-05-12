@@ -29,27 +29,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- Carrusel Bootstrap debajo del header -->
+    <!-- Indicadores y controles para navegar entre las imágenes -->
     <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Botones indicadores del carrusel -->
       <div class="carousel-indicators">
+        <!-- Indicador para la primera imagen -->
         <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <!-- Indicador para la segunda imagen -->
         <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <!-- Indicador para la tercera imagen -->
         <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <!-- Indicador para la cuarta imagen -->
         <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
+      <!-- Contenedor de las diapositivas -->
       <div class="carousel-inner">
+        <!-- Primera diapositiva activa -->
         <div class="carousel-item active">
           <img src="images/autos/Toyota_Corolla.jpeg" class="d-block w-100 carousel-img" alt="Toyota Corolla">
         </div>
+        <!-- Segunda diapositiva -->
         <div class="carousel-item">
           <img src="images/autos/Honda_Civic.jpeg" class="d-block w-100 carousel-img" alt="Honda Civic">
         </div>
+        <!-- Tercera diapositiva -->
         <div class="carousel-item">
           <img src="images/autos/Ford_Mustang_GT.jpeg" class="d-block w-100 carousel-img" alt="Ford Mustang GT">
         </div>
+        <!-- Cuarta diapositiva -->
         <div class="carousel-item">
           <img src="images/autos/Chevrolet_Camaro.jpeg" class="d-block w-100 carousel-img" alt="Chevrolet Camaro">
         </div>
       </div>
+      <!-- Botones prev/next para controlar el carrusel -->
       <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>

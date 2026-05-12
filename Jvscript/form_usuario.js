@@ -1,59 +1,61 @@
 // función registro de usuarios
 function registrarUsuario(event) {
-    event.preventDefault(); // Evitar que el formulario se envíe
+    // Evitar el envío por defecto del formulario
+    event.preventDefault();
 
-    // Obtener usuarios desde localStorage (si existen)
+    // Obtener lista de usuarios existente desde localStorage
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
+    // Leer valores de los inputs de registro
     const usuario = document.getElementById("registro-usuario").value.trim();
     const correo = document.getElementById("registro-email").value.trim();
     const contraseña = document.getElementById("registro-password").value;
     const confirmarContraseña = document.getElementById("registro-password-confirm").value;
 
-    // Validar que se completen todos los campos
+    // Validar campos obligatorios
     if (!usuario || !correo || !contraseña || !confirmarContraseña) {
         alert("Debe completar todos los campos para continuar.");
         return;
     }
 
-    // Validar que las contraseñas coincidan
+    // Validar coincidencia de contraseñas
     if (contraseña !== confirmarContraseña) {
         alert("Contraseña no válida. Ingrese de nuevo.");
         return;
     }
 
-    // Validar formato de correo electrónico
+    // Validar formato del correo
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!re.test(correo)) {
         alert("Correo ingresado inválido.");
         return;
     }
 
-    // si la contraseña es menor a 8 caracteres
+    // Validar longitud mínima de contraseña
     if (contraseña.length < 8) {
         alert("La contraseña debe tener como mínimo 8 caracteres.");
         return;
     }
 
-    // Si usuario ya existe
+    // Comprobar si el correo ya está registrado
     if (usuarios.find(u => u.correo === correo)) {
         alert("Correo ya registrado. Por favor inicie sesión");
         return;
     }
 
-    // crear objeto usuario
+    // Construir objeto de nuevo usuario
     const nuevo_usuario = {
         nombre: usuario,
         correo: correo,
         contraseña: contraseña
     };
 
-    // guardar usuario en el array y en localStorage
+    // Añadir usuario y persistir en localStorage
     usuarios.push(nuevo_usuario);
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     alert("Cuenta creada exitosamente. Por favor inicie sesión.");
 
-    // Limpiar el formulario después del registro exitoso
+    // Limpiar formulario de registro
     const form = document.getElementById("registroForm");
     if (form) form.reset();
 }
