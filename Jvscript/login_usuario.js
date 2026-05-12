@@ -39,14 +39,25 @@ function mostrarUsuario() {
     const formulario = document.getElementById('formulario_usuario');
     const info = document.getElementById('usuario_info');
     const span = document.getElementById('usuarioLogueado');
+    const headerSpan = document.getElementById('header_usuario');
+
+    // also update modal name element if present
+    const modalName = document.getElementById('userModalName');
 
     if (activo && activo.correo) {
         if (formulario) formulario.style.display = 'none';
         if (span) span.textContent = 'Usuario: ' + (activo.nombre || activo.correo);
         if (info) info.style.display = 'flex';
+        if (headerSpan) {
+            headerSpan.textContent = (activo.nombre ? activo.nombre : activo.correo);
+            headerSpan.style.display = 'inline-block';
+        }
+        if (modalName) modalName.textContent = (activo.nombre ? activo.nombre : activo.correo);
     } else {
         if (formulario) formulario.style.display = 'block';
         if (info) info.style.display = 'none';
+        if (headerSpan) headerSpan.style.display = 'none';
+        if (modalName) modalName.textContent = '-';
     }
 }
 
@@ -64,4 +75,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (btnSign) btnSign.addEventListener('click', iniciarSesion);
     const btnLogout = document.getElementById('button_logout');
     if (btnLogout) btnLogout.addEventListener('click', cerrarSesion);
+    const btnLogoutModal = document.getElementById('button_logout_modal');
+    if (btnLogoutModal) btnLogoutModal.addEventListener('click', function() {
+        cerrarSesion();
+        try {
+            const modalEl = document.getElementById('userModal');
+            const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+            modal.hide();
+        } catch (e) {}
+    });
 });

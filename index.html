@@ -20,7 +20,9 @@
     <!-- Encabezado visual con título -->
     <header>
       <!-- Título principal mostrado al usuario -->
-      <h1>Catálogo de Autos-2026</h1>
+      <h1 style="display:flex; align-items:center; gap:12px;">Catálogo de Autos-2026
+        <span id="header_usuario" style="font-size:0.9rem; color:#333; margin-left:8px; display:none; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#userModal"></span>
+      </h1>
     </header>
 
     <!-- Carga el bundle JS de Bootstrap para modales y comportamiento interactivo -->
@@ -84,6 +86,26 @@
     <div id="usuario_info" style="display:none; margin-top:10px; display:flex; align-items:center; gap:10px;">
       <span id="usuarioLogueado"></span>
       <button type="button" id="button_logout" class="btn btn-danger">Cerrar sesión</button>
+    </div>
+  </div>
+
+  <!-- Modal de usuario (abre desde header) -->
+  <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="userModalLabel">Cuenta</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p id="userModalName">-</p>
+          <p>¿Deseas cerrar sesión?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" id="button_logout_modal" class="btn btn-danger">Cerrar sesión</button>
+        </div>
+      </div>
     </div>
   </div>
 
