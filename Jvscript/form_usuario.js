@@ -46,5 +46,20 @@ function registrarUsuario(event) {
         return;
     }
 
-    
+    //crear objeto usuario
+    const nuevo_usuario = {
+        nombre: usuario,
+        correo: correo,
+        contraseña: contraseña
+    };
+
+    //guardar usuario en el array
+    usuarios.push(nuevo_usuario);
+
+    //guardar usuarios en localStorage formato JSON
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    alert("Cuenta creada exítosamente. Por favor inicie sesión.");
+
+    // Limpiar el formulario después del registro exitoso
+    document.getElementById("registro-form").reset(); 
 }
