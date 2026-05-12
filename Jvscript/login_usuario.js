@@ -9,12 +9,14 @@ function iniciarSesion() {
         return;
     }
 
+    // Validar formato de correo electrónico
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!re.test(correo)) {
         alert("Correo inválido.");
         return;
     }
 
+    // Buscar usuario que coincida con correo y contraseña
     const usuario = usuarios.find(u => u.correo === correo && u.contraseña === contraseña);
     if (usuario) {
         const nombre = usuario.nombre || usuario.usuario || usuario.nombreUsuario || '';
@@ -31,6 +33,7 @@ function iniciarSesion() {
     }
 }
 
+// función mostrar usuario logueado
 function mostrarUsuario() {
     const activo = JSON.parse(localStorage.getItem('usuarioActivo'));
     const formulario = document.getElementById('formulario_usuario');
@@ -47,12 +50,14 @@ function mostrarUsuario() {
     }
 }
 
+// función cerrar sesión de usuarios
 function cerrarSesion() {
     localStorage.removeItem('usuarioActivo');
     mostrarUsuario();
     alert('Sesión cerrada.');
 }
 
+// Inicializar eventos al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
     mostrarUsuario();
     const btnSign = document.getElementById('button_signing');
