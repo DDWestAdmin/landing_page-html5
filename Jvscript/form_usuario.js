@@ -24,7 +24,7 @@ function registrarUsuario(event) {
         return;
     }
 
-    // Validar formato del correo
+    // Validar formato del correo  
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!re.test(correo)) {
         alert("Correo ingresado inválido.");
@@ -34,6 +34,24 @@ function registrarUsuario(event) {
     // Validar longitud mínima de contraseña
     if (contraseña.length < 8) {
         alert("La contraseña debe tener como mínimo 8 caracteres.");
+        return;
+    }
+
+    //validar que la contraseña lleva capitales
+    if (!/[A-Z]/. test(contraseña)){
+        alert("La contraseña debe contener al menos una letra capital");
+        return;
+    }
+
+    //validar que la contraseña lleve números
+    if (!/[0-9]/. test(contraseña)){
+        alert("La contraseña debe contener al menos un número");
+        return;
+    }
+
+    //validar que la cntraseña lleve caracteres especiales
+    if (!/[!@#$%^&*(),.?":{}|<>]/. test(contraseña)){
+        alert("la contraseña debe contener un caracter especial ej:(., ?. #)");
         return;
     }
 
