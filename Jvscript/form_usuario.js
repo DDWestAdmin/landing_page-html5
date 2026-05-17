@@ -24,10 +24,16 @@ function registrarUsuario(event) {
         return;
     }
 
-    // Validar formato del correo  
+    // Validar formato del correo
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!re.test(correo)) {
         alert("Correo ingresado inválido.");
+        return;
+    }
+    // Validar que la parte después de @ tenga al menos 5 caracteres
+    const dominio = correo.split('@')[1] || '';
+    if (dominio.length < 5) {
+        alert('Dominio del correo demasiado corto. Use un correo válido.');
         return;
     }
 

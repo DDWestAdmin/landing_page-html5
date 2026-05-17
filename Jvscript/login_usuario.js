@@ -20,6 +20,12 @@ function iniciarSesion() {
         alert("Correo inválido.");
         return;
     }
+    // Verificar que la parte después de @ tenga al menos 5 caracteres
+    const dominio = correo.split('@')[1] || '';
+    if (dominio.length < 5) {
+        alert('Dominio del correo demasiado corto.');
+        return;
+    }
 
     // Buscar usuario que coincida con correo y contraseña
     // Buscar usuario con correo y contraseña coincidentes
