@@ -23,7 +23,7 @@ function iniciarSesion() {
     // Verificar que la parte después de @ tenga al menos 5 caracteres
     const dominio = correo.split('@')[1] || '';
     if (dominio.length < 5) {
-        alert('Dominio del correo demasiado corto.');
+        alert("Correo inválido");
         return;
     }
 
