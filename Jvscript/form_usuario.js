@@ -33,10 +33,10 @@ function registrarUsuario(event) {
     // Validar que la parte después de @ tenga al menos 5 caracteres
     const dominio = correo.split('@')[1] || '';
     if (dominio.length < 5) {
-        alert('Dominio del correo demasiado corto. Use un correo válido.');
+        alert("Correo inválido.");
         return;
     }
-
+    
     // Validar longitud mínima de contraseña
     if (contraseña.length < 8) {
         alert("La contraseña debe tener como mínimo 8 caracteres.");
