@@ -20,3 +20,8 @@ para cerrar sesión usuario
 index.html, css.styles
 instrucciones:
 añade función carrusel bootstrap debajo del header
+
+index.html
+instrucciones:
+necesito que desplegues mensaje en modal de registro_usuario 
+si no se cumple uno de los requerimientos de contraseña de form_usuario.js

@@ -1,3 +1,23 @@
+// Funciones auxiliares para mostrar/limpiar mensajes de error dentro del modal de registro
+function showRegisterError(msg) {
+    clearRegisterError();
+    const modalBody = document.querySelector('#registroModal .modal-body');
+    if (!modalBody) {
+        alert(msg);
+        return;
+    }
+    const div = document.createElement('div');
+    div.id = 'registroError';
+    div.className = 'alert alert-danger';
+    div.textContent = msg;
+    modalBody.insertBefore(div, modalBody.firstChild);
+}
+
+function clearRegisterError() {
+    const existing = document.getElementById('registroError');
+    if (existing) existing.remove();
+}
+
 // función registro de usuarios
 function registrarUsuario(event) {
     // Evitar el envío por defecto del formulario
@@ -20,7 +40,7 @@ function registrarUsuario(event) {
 
     // Validar coincidencia de contraseñas
     if (contraseña !== confirmarContraseña) {
-        alert("Contraseña no válida. Ingrese de nuevo.");
+           showRegisterError("Contraseña no válida. Ingrese de nuevo.");
         return;
     }
 
@@ -39,25 +59,25 @@ function registrarUsuario(event) {
     
     // Validar longitud mínima de contraseña
     if (contraseña.length < 8) {
-        alert("La contraseña debe tener como mínimo 8 caracteres.");
+           showRegisterError("La contraseña debe tener como mínimo 8 caracteres.");
         return;
     }
 
     //validar que la contraseña lleva capitales
     if (!/[A-Z]/. test(contraseña)){
-        alert("La contraseña debe contener al menos una letra capital");
+           showRegisterError("La contraseña debe contener al menos una letra mayúscula");
         return;
     }
 
     //validar que la contraseña lleve números
     if (!/[0-9]/. test(contraseña)){
-        alert("La contraseña debe contener al menos un número");
+           showRegisterError("La contraseña debe contener al menos un número");
         return;
     }
 
     //validar que la cntraseña lleve caracteres especiales
     if (!/[!@#$%^&*(),.?":{}|<>]/. test(contraseña)){
-        alert("la contraseña debe contener un caracter especial ej:(., ?. #)");
+           showRegisterError("La contraseña debe contener al menos un carácter especial (por ejemplo: ! @ # ? . ,)");
         return;
     }
 
@@ -77,7 +97,9 @@ function registrarUsuario(event) {
     // Añadir usuario y persistir en localStorage
     usuarios.push(nuevo_usuario);
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    alert("Cuenta creada exitosamente. Por favor inicie sesión.");
+        // Limpiar posibles mensajes de error y notificar éxito
+        clearRegisterError();
+        alert("Cuenta creada exitosamente. Por favor inicie sesión.");
 
     // Limpiar formulario de registro
     const form = document.getElementById("registroForm");
