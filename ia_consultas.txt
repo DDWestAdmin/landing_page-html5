@@ -25,3 +25,12 @@ index.html
 instrucciones:
 necesito que desplegues mensaje en modal de registro_usuario 
 si no se cumple uno de los requerimientos de contraseña de form_usuario.js
+
+validador_credenciales.js
+necesito que en validador_credenciales me muevas los validadores de login_usuarios.js y register_usuarios.js,
+ademas añade validadores adicionales como;
+verificar que la contraseña sea fuerte (caracter en capital min.1, caracter especial min.1, caracter numero min.1) 
+y que el largo sea min.8 caracteres, muestra tambien un modal con checkbox si se cumple cada requerimiento.
+
+necesito que revises el codigo en validaor_credenciales, logi_usuarios y register_usuarios
+y me des recomendaciones para evitar inyección de credenciales maliciosas

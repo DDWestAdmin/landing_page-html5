@@ -1,5 +1,5 @@
 //función iniciar sesión de usuarios
-function iniciarSesion() {
+async function iniciarSesion() {
     // Obtener el array de usuarios desde localStorage (o array vacío si no existe)
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     // Leer valores de los campos del formulario de inicio de sesión
@@ -13,24 +13,42 @@ function iniciarSesion() {
         return;
     }
 
-    // Validar formato de correo electrónico
-    // Validación simple del formato del correo electrónico
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!re.test(correo)) {
+    // Validar correo usando validador central si está disponible
+    if (typeof validateEmail !== 'function' || !validateEmail(correo)) {
         alert("Correo inválido.");
         return;
     }
-    // Verificar que la parte después de @ tenga al menos 5 caracteres
-    const dominio = correo.split('@')[1] || '';
-    if (dominio.length < 5) {
-        alert("Correo inválido");
-        return;
+
+    // Buscar usuario por correo
+    const usuarioIndex = usuarios.findIndex(u => u.correo === correo);
+    let usuario = usuarioIndex >= 0 ? usuarios[usuarioIndex] : null;
+    let verified = false;
+    if (usuario) {
+        try {
+            if (usuario.contraseñaHash && usuario.contraseñaSalt && typeof verifyPassword === 'function'){
+                verified = await verifyPassword(contraseña, usuario.contraseñaHash, usuario.contraseñaSalt);
+            } else if (usuario.contraseña) {
+                // Fallback: usuario almacenado con contraseña en texto plano. Si coincide, migrar a hash.
+                if (usuario.contraseña === contraseña) {
+                    // migrar
+                    if (typeof hashPassword === 'function'){
+                        const {hash, salt} = await hashPassword(contraseña);
+                        usuarios[usuarioIndex].contraseñaHash = hash;
+                        usuarios[usuarioIndex].contraseñaSalt = salt;
+                        delete usuarios[usuarioIndex].contraseña;
+                        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+                        verified = true;
+                    } else {
+                        verified = true; // no hashing disponible
+                    }
+                }
+            }
+        } catch (e) {
+            verified = false;
+        }
     }
 
-    // Buscar usuario que coincida con correo y contraseña
-    // Buscar usuario con correo y contraseña coincidentes
-    const usuario = usuarios.find(u => u.correo === correo && u.contraseña === contraseña);
-    if (usuario) {
+    if (usuario && verified) {
         // Determinar nombre a mostrar (varias claves posibles)
         const nombre = usuario.nombre || usuario.usuario || usuario.nombreUsuario || '';
         // Guardar sesión activa en localStorage

@@ -214,6 +214,15 @@
               <label for="registro-password-confirm" class="form-label">Confirmar Contraseña</label>
               <input id="registro-password-confirm" type="password" name="confirmar_contraseña" class="form-control" placeholder="Confirmar Contraseña" minlength="8" required>
             </div>
+            <div id="passwordReqContainer" style="display:none; margin-top:10px;">
+              <ul class="list-unstyled mb-0">
+                <li><input type="checkbox" id="req_email_valid" disabled> Correo válido</li>
+                <li><input type="checkbox" id="pw_req_length" disabled> Mínimo 8 caracteres</li>
+                <li><input type="checkbox" id="pw_req_upper" disabled> Al menos una mayúscula</li>
+                <li><input type="checkbox" id="pw_req_number" disabled> Al menos un número</li>
+                <li><input type="checkbox" id="pw_req_special" disabled> Al menos un carácter especial</li>
+              </ul>
+            </div>
           </form>
         </div>
         <div class="modal-footer">
@@ -233,6 +242,8 @@
   <!-- Scripts locales del proyecto para interacción con logos y formularios -->
   <script src="Jvscript/logos.js"></script>
   <script src="Jvscript/form_usuario.js"></script>
+  <script src="Jvscript/validador_credenciales.js"></script>
+  <script src="Jvscript/register_usuario.js"></script>
   <script src="Jvscript/login_usuario.js"></script>
   </body>
 </html> 
